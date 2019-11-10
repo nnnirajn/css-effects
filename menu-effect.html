@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation effect using css</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        .navigation-bar ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .navigation-bar ul li a{
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            padding: 30px 20px;
+            position: relative;
+            color: #000;
+            z-index: 1;
+        }
+        
+        .navigation-bar ul li a::after{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            opacity: 0;
+        }
+        
+        .navigation-bar ul li a::before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: coral;
+            opacity: 0;
+        }
+        
+        .navigation-bar ul li a:hover:before{
+            animation-name: bgcolor;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            z-index: -1;
+        }
+        
+        .navigation-bar ul li a:hover::after{
+            animation-name: border-animtion;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes border-animtion{
+            0%{
+                 opacity: 0; 
+                 transform: scaleY(1);
+                 transform: 
+            }
+            
+            100%{
+                opacity: 1;  
+                transform: translateY(10px);
+                transform: scaleY(0.7);
+            }
+        }
+        
+        @keyframes bgcolor{
+            0%{
+                 opacity: 0;    
+                 transform: scale(0);
+            }
+            
+            100%{
+                opacity: 1;  
+                transform: scaleY(0.5) scaleX(1);
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+   
+     <div class="navigation-bar">
+         <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Services</a></li>
+             <li><a href="#">Portfolio</a></li>
+             <li><a href="#">Study cases</a></li>
+             <li><a href="#">Contact</a></li>
+         </ul>
+     </div>
+   
+    
+     <script>
+    
+     </script> 
+</body>
+</html>

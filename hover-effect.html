@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button hover effect</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container a{
+            padding: 18px 56px;
+            display: inline-block;
+            transform: skewX(-20deg);
+            text-decoration: none;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #fff;
+            background: linear-gradient(to right, #bb45f5, #1b5bbf, #bb45f5);
+            background-size: 200% auto;
+            transition: all 0.3s;
+            letter-spacing: 2px;
+        }
+        
+        .container a:hover{
+            background-position: right center;
+        }
+        
+    </style>
+</head>
+<body>
+    
+     <div class="container">
+        <a href="javacsript:void(0);">submit</a> 
+     </div>
+    
+    <script>
+    
+    </script>
+</body>
+</html>
